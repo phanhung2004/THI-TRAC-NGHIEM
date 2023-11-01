@@ -48,3 +48,12 @@
 .trang ul li a{
     text-decoration: none; 
 }
+footer{
+    height: 200px;
+    background-color: rgb(95, 91, 91);
+}
+footer p{
+    color: white;
+    align-items: center;
+    text-align: center;
+}

@@ -2,7 +2,8 @@
     session_start();
     include "model/pdo.php";
 
-    $act=$_GET['act'] ?? "";
+    if(isset($_GET['act'])&&($_GET['act']!="")){
+        $act=$_GET['act'];
         switch($act){
             case "login":
                 include "view/login.php";
@@ -10,13 +11,13 @@
             case "home":
                 include "view/home.php";
                 break;
-            case "dethi":
-                include "view/dethi.php";
+                    case "home":
+                include "view/home.php";
                 break;
-            default:
-            $view= "404";
         }
-
+    }else{
+        include "view/home.php";
+    }
 
     include "view/footer.php";
 

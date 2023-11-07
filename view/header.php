@@ -41,10 +41,10 @@
                       <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                     <form class="d-flex m-1" role="login">
-                        <button class="btn btn-outline-success" type="submit"><a href="register.html">Register</a></button>
+                        <button class="btn btn-outline-success" type="submit"><a style="text-decoration: none;" href="register.html">Register</a></button>
                     </form>
                     <form class="d-flex m-1" role="sigin">
-                        <button class="btn btn-outline-success" type="submit"><a href="index.php?act=login">Login</a></button>
+                        <button class="btn btn-outline-success" type="submit"><a style="text-decoration: none;" href="index.php?act=login">Login</a></button>
                     </form>
                   </div>
                 </div>

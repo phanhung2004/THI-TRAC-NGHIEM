@@ -8,10 +8,19 @@
             case "login":
                 include "view/login.php";
                 break;
+            case "dethi":
+                include "dethi.html";
+                break;
             case "home":
                 include "view/home.php";
                 break;
-                    case "home":
+            case "register":
+                include "register.html";
+                break;
+            case "login":
+                include "login.html";
+                break;
+            case "home":
                 include "view/home.php";
                 break;
         }
@@ -20,5 +29,4 @@
     }
 
     include "view/footer.php";
-
 ?>

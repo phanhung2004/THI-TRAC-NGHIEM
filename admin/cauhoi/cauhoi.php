@@ -10,7 +10,7 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
+                <th scope="col">STT</th>
                 <th scope="col">câu hỏi</th>
                 <th scope="col">chuyên đề</th>
                 <th scope="col">tác giả</th>
@@ -20,6 +20,23 @@
             </thead>
             <tbody>
               <tr>
+                <?php
+                  foreach($listcauhoi as $ch){
+                    extract($ch);
+                    $deletecauhoi = "index.php?act=deletecauhoi&idch=".$id;
+
+                ?>
+                <th scope="row"><?=$id?></th>
+                <td><?=$noidung?></td><br>
+                <td><?=$tenchuyende?></td>
+                <td>adimn a</td>
+              
+                <td><a href=""><input type="button" value="Sửa"></a>   
+                <?php
+                  }
+                ?>
+              </tr>
+              <!-- <tr>
                 <th scope="row">1</th>
                 <td>đây là gì</td>
                 <td>abc</td>
@@ -74,16 +91,8 @@
                 <td>adimn a</td>
               
                 <td><a href="http://">sua</a><a href="http://">xoa</a></td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>đây là gì</td>
-                <td>abc</td>
-                <td>adimn a</td>
-              
-                <td><a href="http://">sua</a><a href="http://">xoa</a></td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
 <br>
-     <button>them</button>
+<button><a href="index.php?act=addcauhoi">Them cau hoi</a></button>

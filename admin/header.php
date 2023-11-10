@@ -34,13 +34,13 @@
                                 <a class="nav-link active" aria-current="page" href="#">Admin</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Thành viên</a>
+                                <a class="nav-link" href="index.php?act=thanhvien">Thành viên</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Chuyên đề</a>
+                                <a class="nav-link" href="index.php?act=chuyende">Chuyên đề</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Câu hỏi</a>
+                                <a class="nav-link" href="index.php?act=cauhoi">Câu hỏi</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Câu trả lời</a>

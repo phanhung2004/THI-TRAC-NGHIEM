@@ -1,14 +1,14 @@
 <div class="row2">
          <div class="row2 font_title">
-          <h1>THÊM MỚI LOẠI CAU HOI</h1>
+          <h1>THÊM MỚI LOẠI CÂU HỎI</h1>
          </div>
          <div class="row2 form_content ">
           <form action="index.php?act=addcauhoi" method="POST" enctype="multipart/form-data">
 
           <div class="row2 mb10 form_content_container">
-           <label> ten chuyen de </label> <br>
+           <label> Tên chuyên đề </label> <br>
             <select name="idcd" id="">
-                    <option value="0" selected>tat ca</option>
+                    <option value="0" selected>Tất cả</option>
                     <?php
                         foreach($listchuyende as $cd){
                             extract($cd);
@@ -18,12 +18,12 @@
             </select>
            </div>
            <div class="row2 mb10 form_content_container">
-           <label> Noi dung </label> <br>
-            <input type="text" name="noidung" placeholder="nhập vào tên noi dung">
+           <label> Nội dung </label> <br>
+            <input type="text" name="noidung" placeholder="Nhập vào tên nội dung">
            </div>
            <div class="row2 mb10 form_content_container">
-           <label> cau dung </label> <br>
-            <input type="text" name="caudung" placeholder="nhập vào tên noi dung">
+           <label> Câu đúng </label> <br>
+            <input type="text" name="caudung" placeholder="Nhập vào tên nội dung">
            </div>
 
            <div class="row mb10 ">

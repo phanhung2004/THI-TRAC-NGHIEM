@@ -1,6 +1,6 @@
 <footer>
             <div class="title">
-                <p>Han hanh da tham gia cung chung toi de trai nghiem thi</p>
+                <p>Hân hạnh đã tham gia cùng chúng tôi để trải nghiệm thi</p>
             </div>
         </footer>
     </div>

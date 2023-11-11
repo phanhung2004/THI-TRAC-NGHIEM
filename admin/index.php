@@ -87,7 +87,7 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             include "thanhvien/thanhvien.php";
             break;   
         case"suacd":
-            $title = "cap nhat chuyen de";
+            $title = "Cập nhật chuyên đề";
             if(isset($_GET['id'])){
                 $id = $_GET['id'];
                 include "chuyende/edit.php";

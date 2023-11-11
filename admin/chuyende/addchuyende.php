@@ -1,14 +1,14 @@
 
 <div class="row2">
          <div class="row2 font_title">
-          <h1>THÊM MỚI LOẠI chuyen de</h1>
+          <h1>THÊM MỚI LOẠI CHUYÊN ĐỀ</h1>
          </div>
          <div class="row2 form_content ">
           <form action="index.php?act=addchuyende" method="POST" enctype="multipart/form-data">
 
            <div class="row2 mb10 form_content_container">
-           <label> Tên chuyen de </label> <br>
-            <input type="text" name="tenchuyende" placeholder="nhập vào tên chuyen de">
+           <label> Tên chuyên đề </label> <br>
+            <input type="text" name="tenchuyende" placeholder="Nhập vào tên chuyên đề">
            </div>
 
            <div class="row mb10 ">

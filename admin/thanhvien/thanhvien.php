@@ -2,7 +2,7 @@
         <br>
         <div class="input-group">
             <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-            <button type="button" class="btn btn-outline-primary">search</button>
+            <button type="button" class="btn btn-outline-primary">Search</button>
           </div>
           <br>
           <br>
@@ -10,10 +10,10 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">STT</th>
-                <th scope="col">name</th>
-                <th scope="col">sdt</th>
-                <th scope="col">pass</th>
+                <th scope="col">Số thứ tự</th>
+                <th scope="col">Tên</th>
+                <th scope="col">Số điện thoại</th>
+                <th scope="col">Mật khẩu</th>
                 <th scope="col"></th>
               </tr>
             </thead>
@@ -29,7 +29,7 @@
                 <td><?=$sodienthoai?></td>
                 <td><?=$password?></td>
                 <td><a href=""><input type="button" value="Sửa"></a>   
-                <td><a href="<?=$delete_nguoidung?>"><input type="button" onclick="return confirm('ban co muon xoa khong')" value="Xóa"></a>
+                <td><a href="<?=$delete_nguoidung?>"><input type="button" onclick="return confirm('Bạn có muốn xóa không?')" value="Xóa"></a>
               </tr>
               <?php
                   }
@@ -51,4 +51,4 @@
             </tbody>
           </table>
 <br>
-<button><a href="index.php?act=addnguoidung">Them nguoi dung</a></button>
+<button><a href="index.php?act=addnguoidung">Thêm người dùng</a></button>

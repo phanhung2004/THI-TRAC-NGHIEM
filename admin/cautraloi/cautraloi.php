@@ -2,7 +2,7 @@
         <br>
         <div class="input-group">
             <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-            <button type="button" class="btn btn-outline-primary">search</button>
+            <button type="button" class="btn btn-outline-primary">Search</button>
           </div>
           <br>
           <br>
@@ -27,7 +27,7 @@
                 <td>abc</td>
                 <td>admin a</td>
               
-                <td><a href="http://">sua</a><a href="http://">xoa</a></td>
+                <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
               </tr>
               <tr>
                 <th scope="row">2</th>
@@ -36,7 +36,7 @@
                 <td>abc</td>
                 <td>admin a</td>
               
-                <td><a href="http://">sua</a><a href="http://">xoa</a></td>
+                <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
               </tr>
               <tr>
                 <th scope="row">3</th>
@@ -45,9 +45,9 @@
                 <td>abc</td>
                 <td>admin a</td>
               
-                <td><a href="http://">sua</a><a href="http://">xoa</a></td>
+                <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
               </tr>
             </tbody>
           </table>
 <br>
-     <button>them</button>
+     <button>Thêm</button>

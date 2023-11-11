@@ -95,4 +95,4 @@
             </tbody>
           </table>
 <br>
-<button><a href="index.php?act=addcauhoi">Them cau hoi</a></button>
+<button><a href="index.php?act=addcauhoi">Thêm câu hỏi</a></button>

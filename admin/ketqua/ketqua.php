@@ -12,9 +12,9 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">name</th>
-                    <th scope="col">kết quả</th>
-                    <th scope="col">kì thi</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Kết quả</th>
+                    <th scope="col">Kì thi</th>
 
                     <th scope="col"></th>
                 </tr>
@@ -26,7 +26,7 @@
                     <td>dat</td>
                     <td>giua ki</td>
 
-                    <td><a href="http://">sua</a><a href="http://">xoa</a></td>
+                    <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
                 </tr>
                 <tr>
                     <th scope="row">1</th>
@@ -34,7 +34,7 @@
                     <td>dat</td>
                     <td>giua ki</td>
 
-                    <td><a href="http://">sua</a><a href="http://">xoa</a></td>
+                    <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
                 </tr>
                 <tr>
                     <th scope="row">1</th>
@@ -42,9 +42,9 @@
                     <td>dat</td>
                     <td>giua ki</td>
 
-                    <td><a href="http://">sua</a><a href="http://">xoa</a></td>
+                    <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
                 </tr>
             </tbody>
         </table>
         <br>
-        <button>them</button>
+        <button>Thêm</button>

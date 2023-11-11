@@ -11,10 +11,10 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">tên đề</th>
-                <th scope="col">số lượng câu</th>
-                <th scope="col">thời gian</th>
-                <th scope="col">chuyên đề liên quan</th>
+                <th scope="col">Tên đề</th>
+                <th scope="col">Số lượng câu</th>
+                <th scope="col">Thời gian</th>
+                <th scope="col">Chuyên đề liên quan</th>
                 
                 <th scope="col"></th>
               </tr>
@@ -27,7 +27,7 @@
                 <td>50 p</td>
                 <td>abc</td>
               
-                <td><a href="http://">sua</a><a href="http://">xoa</a></td>
+                <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
               </tr>
               <tr>
                 <th scope="row">1</th>
@@ -36,7 +36,7 @@
                 <td>50 p</td>
                 <td>abc</td>
               
-                <td><a href="http://">sua</a><a href="http://">xoa</a></td>
+                <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
               </tr>
               <tr>
                 <th scope="row">1</th>
@@ -45,9 +45,9 @@
                 <td>50 p</td>
                 <td>abc</td>
               
-                <td><a href="http://">sua</a><a href="http://">xoa</a></td>
+                <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
               </tr>
             </tbody>
           </table>
 <br>
-     <button>them</button>
+     <button>Thêm</button>

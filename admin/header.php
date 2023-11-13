@@ -43,23 +43,19 @@
                                 <a class="nav-link" href="index.php?act=cauhoi">Câu hỏi</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Câu trả lời</a>
+                                <a class="nav-link" href="index.php?act=cautraloi">Câu trả lời</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Đề thi</a>
+                                <a class="nav-link" href="index.php?act=dethi">Đề thi</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Lịch thi</a>
+                                <a class="nav-link" href="index.php?act=lichthi">Lịch thi</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Kết quả thi</a>
-                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Biểu đồ và Thống kê</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                            </li>
+
                         </ul>
                     </div>
                 </div>

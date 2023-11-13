@@ -10,43 +10,32 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Tên đề</th>
-                <th scope="col">Số lượng câu</th>
-                <th scope="col">Thời gian</th>
-                <th scope="col">Chuyên đề liên quan</th>
-                
+                <th scope="col">STT</th>
+                <th scope="col">So cau</th>
+                <th scope="col">bo de thi</th>
                 <th scope="col"></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>thi thu lan 1</td>
-                <td>20</td>
-                <td>50 p</td>
-                <td>abc</td>
-              
-                <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
+                <?php
+                $stt=0;
+                  foreach($listdethi as $dt){
+                    extract($dt);
+                    $stt+=1;
+                    $deletedethi="index.php?act=deletedethi&iddt=".$id;
+            
+                ?>
+                <th scope="row"><?=$stt?></th>
+                <td><?=$socau?></td>
+                <td><?=$bodethi?></td>
+                <td><a href="$suasp"><input type="button" value="Sửa"></a>   
+                <td><a href="<?=$deletedethi?>"><input type="button" onclick="return confirm('ban co muon xoa khong')" value="Xóa"></a>
+                <?php
+                  }
+                ?>
               </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>thi thu lan 1</td>
-                <td>20</td>
-                <td>50 p</td>
-                <td>abc</td>
-              
-                <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>thi thu lan 1</td>
-                <td>20</td>
-                <td>50 p</td>
-                <td>abc</td>
-              
-                <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
-              </tr>
+
             </tbody>
           </table>
 <br>

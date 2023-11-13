@@ -4,10 +4,36 @@ include "../model/chuyende.php";
 include "../model/pdo.php";
 include "../model/cauhoi.php";
 include "../model/thanhvien.php";
+include "../model/dethi.php";
+include "../model/lichthi.php";
 
 if (isset($_GET['act']) && ($_GET['act']!="")){
     $act=$_GET['act'];
     switch($act){
+        case "deletelichthi":
+            if(isset($_GET['idlt']) && ($_GET['idlt']>0)){
+                delete_lichthi($_GET['idlt']);
+                // echo "haha";
+            }
+            $listlichthi=loadall_lichthi();
+            include "lichthi/lichthi.php";
+            break;
+        case "lichthi":
+            $listlichthi=loadall_lichthi();
+            include "lichthi/lichthi.php";
+            break;
+        case "deletedethi":
+            if(isset($_GET['iddt']) && ($_GET['iddt']>0)){
+                delete_dethi($_GET['iddt']);
+                // echo "haha";
+            }
+            $listdethi=loadall_dethi();
+            include "dethi/dethi.php";
+            break;
+        case "dethi":
+            $listdethi=loadall_dethi();
+            include "dethi/dethi.php";
+            break;
         case "addcauhoi":
             if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
                 $idcd=$_POST['idcd'];

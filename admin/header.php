@@ -43,7 +43,7 @@
                                 <a class="nav-link" href="index.php?act=cauhoi">Câu hỏi</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index.php?act=cautraloi">Câu trả lời</a>
+                                <a class="nav-link" href="index.php?act=dapan">Đáp án</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="index.php?act=dethi">Đề thi</a>

@@ -6,10 +6,33 @@ include "../model/cauhoi.php";
 include "../model/thanhvien.php";
 include "../model/dethi.php";
 include "../model/lichthi.php";
+include "../model/dapan.php";
 
 if (isset($_GET['act']) && ($_GET['act']!="")){
     $act=$_GET['act'];
     switch($act){
+        case "adddapan":
+            if(isset($_POST['adddapan']) && ($_POST['adddapan'])){
+                $id=$_POST['id'];
+                $dapan=$_POST['dapan'];
+                $type=$_POST['type'];
+                $dapan2=$_POST['dapan2'];
+                $type2=$_POST['type2'];
+                $dapan3=$_POST['dapan3'];
+                $type3=$_POST['type3'];
+                $dapan4=$_POST['dapan4'];
+                $type4=$_POST['type4'];
+                echo
+                insert_dapan($id,$dapan, $type, $dapan2, $type2, $dapan3, $type3, $dapan4, $type4);
+
+            }
+            $listcauhoi = load_all_cauhoi();
+            include "cautraloi/adddapan.php";
+            break;
+        case "dapan":
+            $listdapan = loadall_dapan();
+            include "cautraloi/cautraloi.php";
+            break;
         case "deletelichthi":
             if(isset($_GET['idlt']) && ($_GET['idlt']>0)){
                 delete_lichthi($_GET['idlt']);

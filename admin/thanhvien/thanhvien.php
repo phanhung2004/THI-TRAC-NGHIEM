@@ -12,9 +12,12 @@
               <tr>
                 <th scope="col">Số thứ tự</th>
                 <th scope="col">Tên</th>
-                <th scope="col">Số điện thoại</th>
                 <th scope="col">Mật khẩu</th>
-                <th scope="col"></th>
+                <th scope="col">Hình ảnh</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">Số điện thoại</th>
+                <th scope="col">Quyen</th>
+                <th scope="col">Thao tác</th>
               </tr>
             </thead>
             <tbody>
@@ -22,32 +25,22 @@
                 <?php
                   foreach($listnguoidung as $nd){
                     extract($nd);
-                    $delete_nguoidung = "index.php?act=deletenguoidung&idnd=".$id;
+                    $suanguoidung="index.php?act=suanguoidung&idnd=".$id;
+                    $xoanguoidung = "index.php?act=xoanguoidung&idnd=".$id;
                 ?>
                 <th scope="row"><?=$id?></th>
                 <td><?=$username?></td>
-                <td><?=$sodienthoai?></td>
                 <td><?=$password?></td>
-                <td><a href=""><input type="button" value="Sửa"></a>   
-                <td><a href="<?=$delete_nguoidung?>"><input type="button" onclick="return confirm('Bạn có muốn xóa không?')" value="Xóa"></a>
+                <td><?=$hinhanh?></td>
+                <td><?=$diachi?></td>
+                <td><?=$sodienthoai?></td>
+                <td><?=$quyen?></td>
+                <td><a href="<?=$suanguoidung?>"><input type="button" value="Sửa"></a>   
+                <td><a href="<?=$xoanguoidung?>"><input type="button" onclick="return confirm('Bạn có muốn xóa không?')" value="Xóa"></a>
               </tr>
               <?php
                   }
               ?>
-              <!-- <tr>
-                <th scope="row">1</th>
-                <td>b</td>
-                <td>@mdàdsfsdef</td>
-                <td>học sinh</td>
-                <td><a href="http://">sua</a><a href="http://">xoa</a></td>
-              </tr> 
-              <tr>
-                <th scope="row">1</th>
-                <td>c</td>
-                <td>@mddsfseo</td>
-                <td>admin</td>
-                <td><a href="http://">sua</a><a href="http://">xoa</a></td>
-              </tr> -->
             </tbody>
           </table>
 <br>

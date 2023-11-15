@@ -124,9 +124,23 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             }
             include "./thanhvien/addnguoidung.php";
             break;
-        case "deletenguoidung":
+        case "suanguoidung":
+            if(isset($_POST['capnhat']) && ($_POST['capnhat'])){
+                $username=$_POST['username'];
+                $password=$_POST['password'];
+                $hinhanh=$_POST['hinhanh'];
+                $diachi=$_POST['diachi'];
+                $sodienthoai=$_POST['sodienthoai'];
+                $quyen=$_POST['quyen'];
+
+                update_nguoidung($username, $password, $hinhanh, $diachi, $sodienthoai, $quyen);
+            }
+            $listnguoidung=load_all_nguoidung();
+            include "thanhvien/updatenguoidung.php";
+            break;
+        case "xoanguoidung":
             if(isset($_GET['idnd']) && ($_GET['idnd']>0)){
-                delete($_GET['idnd']);
+                delete_nguoidung($_GET['idnd']);
             }
             $listnguoidung=load_all_nguoidung();
             include "thanhvien/thanhvien.php";

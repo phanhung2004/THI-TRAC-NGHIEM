@@ -125,7 +125,14 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             include "./thanhvien/addnguoidung.php";
             break;
         case "suanguoidung":
+            if(isset($_GET['idnd']) && ($_GET['idnd'] > 0) ){
+                    $taikhoan=load_one_nguoidung($_GET['idnd']);
+            }
+            include "thanhvien/updatenguoidung.php";
+            break;
+        case "updatend":
             if(isset($_POST['capnhat']) && ($_POST['capnhat'])){
+                $id=$_POST['id'];
                 $username=$_POST['username'];
                 $password=$_POST['password'];
                 $hinhanh=$_POST['hinhanh'];
@@ -133,9 +140,8 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
                 $sodienthoai=$_POST['sodienthoai'];
                 $quyen=$_POST['quyen'];
 
-                update_nguoidung($username, $password, $hinhanh, $diachi, $sodienthoai, $quyen);
+                update_nguoidung($id,$username, $password, $hinhanh, $diachi, $sodienthoai, $quyen);
             }
-            $listnguoidung=load_all_nguoidung();
             include "thanhvien/updatenguoidung.php";
             break;
         case "xoanguoidung":

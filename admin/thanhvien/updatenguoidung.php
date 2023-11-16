@@ -7,12 +7,12 @@
 
            <div class="row2 mb10 form_content_container">
            <label> Tên </label> <br>
-            <input type="text" name="username" placeholder="Nhập vào tên người dùng">
+            <input type="text" name="username" placeholder="Nhập vào tên người dùng" value="<?=$username?>">
            </div>
 
            <div class="row2 mb10 form_content_container">
            <label> Mật khẩu </label> <br>
-            <input type="text" name="password" placeholder="Nhập vào mật khẩu">
+            <input type="text" name="password" placeholder="Nhập vào mật khẩu" value="<?=$password?>">
            </div>
 
            <div class="row2 mb10 form_content_container">
@@ -22,20 +22,21 @@
 
            <div class="row2 mb10 form_content_container">
            <label> Địa chỉ </label> <br>
-            <input type="text" name="diachi" placeholder="Nhập vào tên địa chỉ">
+            <input type="text" name="diachi" placeholder="Nhập vào tên địa chỉ" value="<?=$diachi?>">
            </div>
 
            <div class="row2 mb10 form_content_container">
            <label> Số điện thoại </label> <br>
-            <input type="text" name="sodienthoai" placeholder="Nhập vào số điện thoại">
+            <input type="text" name="sodienthoai" placeholder="Nhập vào số điện thoại" value="<?=$sodienthoai?>">
            </div>
 
            <div class="row2 mb10 form_content_container">
            <label> Quyen </label> <br>
-            <input type="text" name="quyen" placeholder="Nhập vào quyen">
+            <input type="text" name="quyen" placeholder="Nhập vào quyen" value="<?=$quyen?>">
            </div>
 
            <div class="row mb10 ">
+           <input type="hidden" name="id" value="<?=$id?>">
          <input class="mr20" name="capnhat" type="submit" value="CẬP NHẬT">
          <input  class="mr20" type="reset" value="NHẬP LẠI">
 

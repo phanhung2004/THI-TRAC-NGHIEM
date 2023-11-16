@@ -11,6 +11,10 @@ include "../model/dapan.php";
 if (isset($_GET['act']) && ($_GET['act']!="")){
     $act=$_GET['act'];
     switch($act){
+        case "viewdapan":
+            $listdapan =loadall_dapan();
+            include "cautraloi/viewdapan.php";
+            break;
         case "adddapan":
             if(isset($_POST['adddapan']) && ($_POST['adddapan'])){
                 $id=$_POST['id'];
@@ -22,10 +26,11 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
                 $type3=$_POST['type3'];
                 $dapan4=$_POST['dapan4'];
                 $type4=$_POST['type4'];
-                echo
+                echo $id;
                 insert_dapan($id,$dapan, $type, $dapan2, $type2, $dapan3, $type3, $dapan4, $type4);
 
             }
+            $listdapan =loadall_dapan();
             $listcauhoi = load_all_cauhoi();
             include "cautraloi/adddapan.php";
             break;

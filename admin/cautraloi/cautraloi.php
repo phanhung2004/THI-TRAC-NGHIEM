@@ -22,20 +22,23 @@
             <tbody>
               <tr>
               <?php
-                  foreach($listdapan as $da){
-                    extract($da);
-                  
-                ?>
-                <th scope="row"><?=$id_cauhoi?></th>
-                <td><?=$noidung?></td>
-                <td><?=$dapan?></td>
-              
-                <td><?=$type?></td>
-              
-                <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
-              </tr>
+                $previousContent = '';
+                $displayedQuestions = []; // Mảng lưu trữ các câu hỏi đã được hiển thị
+                foreach($listdapan as $da){
+                  extract($da);
+                  if(!in_array($id_cauhoi, $displayedQuestions)){ // Kiểm tra xem câu hỏi đã được hiển thị chưa
+              ?>
+                  <tr>
+                    <th scope="row"><?= $id_cauhoi ?></th>
+                    <td><a href="index.php?act=viewdapan"><?= $noidung ?></a></td>
+                    <td><?= $dapan ?></td>
+                    <td><?= $type ?></td>
+                    <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
+                  </tr>
               <?php
+                    $displayedQuestions[] = $id_cauhoi; // Thêm câu hỏi vào danh sách đã hiển thị
                   }
+                }
               ?>
             </tbody>
           </table>

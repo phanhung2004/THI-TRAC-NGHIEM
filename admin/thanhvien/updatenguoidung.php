@@ -1,38 +1,44 @@
+<?php
+    if(is_array($taikhoan)){
+        extract($taikhoan);
+    }
+  
+?>
 <div class="row2">
          <div class="row2 font_title">
           <h1>Cập nhật người dùng</h1>
          </div>
          <div class="row2 form_content ">
-          <form action="index.php?act=addnguoidung" method="POST" enctype="multipart/form-data">
+          <form action="index.php?act=suanguoidung" method="POST" enctype="multipart/form-data">
 
            <div class="row2 mb10 form_content_container">
            <label> Tên </label> <br>
-            <input type="text" name="username" placeholder="Nhập vào tên người dùng" value="<?=$username?>">
+            <input type="text" name="username" value="<?=$username?>" placeholder="Nhập vào tên người dùng">
            </div>
 
            <div class="row2 mb10 form_content_container">
            <label> Mật khẩu </label> <br>
-            <input type="text" name="password" placeholder="Nhập vào mật khẩu" value="<?=$password?>">
+            <input type="text" name="password" value="<?=$passwork?>" placeholder="Nhập vào mật khẩu">
            </div>
 
            <div class="row2 mb10 form_content_container">
            <label> Hình ảnh </label> <br>
-            <input type="text" name="hinhanh" placeholder="Nhập vào mật khẩu">
+            <input type="text" name="hinhanh"  value="<?=$hinhanh?>" placeholder="Nhập vào mật khẩu">
            </div>
 
            <div class="row2 mb10 form_content_container">
            <label> Địa chỉ </label> <br>
-            <input type="text" name="diachi" placeholder="Nhập vào tên địa chỉ" value="<?=$diachi?>">
+            <input type="text" name="diachi"  value="<?=$diachi?>" placeholder="Nhập vào tên địa chỉ">
            </div>
 
            <div class="row2 mb10 form_content_container">
            <label> Số điện thoại </label> <br>
-            <input type="text" name="sodienthoai" placeholder="Nhập vào số điện thoại" value="<?=$sodienthoai?>">
+            <input type="text" name="sodienthoai" value="<?=$sodienthoai?>" placeholder="Nhập vào số điện thoại">
            </div>
 
            <div class="row2 mb10 form_content_container">
            <label> Quyen </label> <br>
-            <input type="text" name="quyen" placeholder="Nhập vào quyen" value="<?=$quyen?>">
+            <input type="text" name="quyen" value="<?=$quyen?>" placeholder="Nhập vào quyen">
            </div>
 
            <div class="row mb10 ">

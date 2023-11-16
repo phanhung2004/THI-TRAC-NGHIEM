@@ -4,7 +4,7 @@ function pdo_get_connection(){
     $username = "root";
     $password = "";
     try {
-        $conn = new PDO("mysql:host=$servername;dbname=thitracnghiem", $username, $password);
+        $conn = new PDO("mysql:host=$servername;dbname=thitracnghiem2", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $conn;
     } catch(PDOException $e) {
@@ -33,6 +33,7 @@ function pdo_query($sql){
     try{
         $conn=pdo_get_connection();
         $stmt=$conn->prepare($sql);
+        // echo $sql;die;
         $stmt->execute($sql_args);
         $rows=$stmt->fetchAll();
         return $rows;

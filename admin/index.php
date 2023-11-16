@@ -12,7 +12,7 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
     $act=$_GET['act'];
     switch($act){
         case "viewdapan":
-            $listdapan =loadall_dapan();
+            $listdapan =viewdapan($_GET['idch']);
             include "cautraloi/viewdapan.php";
             break;
         case "adddapan":

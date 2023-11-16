@@ -8,5 +8,9 @@
         $sql = "INSERT INTO `dapan` (`dapan`, `type`, `id_cauhoi`) VALUES ('$dapan', '$type', '$id'), ('$dapan2', '$type2', '$id'), ('$dapan3', '$type3', '$id'), ('$dapan4', '$type4', '$id')";
         pdo_execute($sql);
     }
-
+    function viewdapan($id){
+        $sql = "SELECT * FROM `dapan` WHERE `id_cauhoi` = '$id'";
+        $listdapanview=pdo_query($sql);
+        return $listdapanview;
+    }
 ?>

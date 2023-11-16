@@ -1,17 +1,17 @@
 <form action="index.php?act=adddapan" method="POST">
-        <div class="row2 mb10 form_content_container">
-           <label> Nội dung câu hỏi</label> <br>
-            <select name="idcd" id="">
-                    <option value="0" selected>Tất cả</option>
-                    <?php
-                        foreach($listdapan as $da){
-                            extract($da);
-                            echo '<option value="'.$id.'">'.$dapan.'</option>';
-                        }
-                    ?>
-            </select>
-           </div>
 
-    <input type="hidden" name="id" value="<?=$id?>">
-    <input type="submit" name="adddapan" value="Thêm đáp án"><br>
+<?php
+$stt = 0;
+    foreach($listdapan as $da){
+        $stt+=1;
+        extract($da);
+?>
+    <label for="">Dap an <?=$stt?></label><br>
+    <input type="text" name="dapan1" value="<?=$dapan?>"><br>
+<?php
+}
+?>
+
+    <input type="hidden" name="id" value="<?=$id?>"><br>
+    <input type="submit" name="adddapan" value="Sua đáp án"><br>
 </form>

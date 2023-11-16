@@ -26,11 +26,12 @@
                 $displayedQuestions = []; // Mảng lưu trữ các câu hỏi đã được hiển thị
                 foreach($listdapan as $da){
                   extract($da);
+                  $link = "index.php?act=viewdapan&idch=".$id_cauhoi;
                   if(!in_array($id_cauhoi, $displayedQuestions)){ // Kiểm tra xem câu hỏi đã được hiển thị chưa
               ?>
                   <tr>
                     <th scope="row"><?= $id_cauhoi ?></th>
-                    <td><a href="index.php?act=viewdapan"><?= $noidung ?></a></td>
+                    <td><a href="<?=$link?>"><?= $noidung ?></a></td>
                     <td><?= $dapan ?></td>
                     <td><?= $type ?></td>
                     <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>

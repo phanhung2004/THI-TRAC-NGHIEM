@@ -27,7 +27,7 @@
 
                 ?>
                 <th scope="row"><?=$id?></th>
-                <td><?=$noidung?></td><br>
+                <td><a href="index.php?act=dapan"><?=$noidung?></a></td><br>
                 <td><?=$tenchuyende?></td>
                 <td>adimn a</td>
               

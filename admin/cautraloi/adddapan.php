@@ -31,6 +31,6 @@
     <label for="">câu đúng(1) câu sai(0) type</label><br>
     <input type="text" name="type4" placeholder="câu đúng(1) câu sai(0)"><br>
 
-    <input type="hidden" name="id" value="<?=$id_cauhoi?>">
+    <input type="hidden" name="id" value="<?=$id?>">
     <input type="submit" name="adddapan" value="Thêm đáp án"><br>
 </form>

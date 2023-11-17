@@ -18,7 +18,7 @@
 
            <div class="row2 mb10 form_content_container">
            <label> Mật khẩu </label> <br>
-            <input type="text" name="password" value="<?=$passwork?>" placeholder="Nhập vào mật khẩu">
+            <input type="text" name="password" value="<?=$password?>" placeholder="Nhập vào mật khẩu">
            </div>
 
            <div class="row2 mb10 form_content_container">

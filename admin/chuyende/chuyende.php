@@ -24,13 +24,14 @@
                 <?php
                   foreach($listchuyende as $cd){
                     extract($cd);
+                    $suacd="index.php?act=suacd&idcd=".$id;
                     $deletechuyende = "index.php?act=deletechuyende&idcd=".$id;
                 ?>
                 <th scope="row"><?=$id?></th>
                 <td><?=$tenchuyende?></td>
                 <!-- <td>75</td> -->
               
-                <td><a href="$suasp"><input type="button" value="Sửa"></a>   
+                <td><a href="<?=$suacd ?>"><input type="button" value="Sửa"></a>   
                 <td><a href="<?=$deletechuyende?>"><input type="button" onclick="return confirm('ban co muon xoa khong')" value="Xóa"></a>
                 <?php
                   }
@@ -40,4 +41,4 @@
             </tbody>
           </table>
 <br>
-     <button><a href="index.php?act=addchuyende">Them chuyen de</a></button>
+     <button><a href="index.php?act=addchuyende">Thêm chuyên đề</a></button>

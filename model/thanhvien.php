@@ -14,7 +14,7 @@
         pdo_execute($sql);
     }
     function update_nguoidung($id, $username, $password, $hinhanh, $diachi, $sodienthoai, $quyen){
-        $sql="UPDATE `nguoidung` SET `username` = '{$username}', `password` = '{$password}', `hinhanh` = '{$hinhanh}', `diachi` = '{$diachi}', `sodienthoai` = '{$sodienthoai}', `quyen` = '{$quyen}' WHERE `nguoidung`.`id` = $id";
+        $sql="UPDATE `nguoidung` SET `username` = '{$username}', `password` = '{$password}', `hinhanh` = '{$hinhanh}', `diachi` = '{$diachi}', `sodienthoai` = '{$sodienthoai}', `quyen` = '{$quyen}' WHERE `nguoidung`.`id` = '{$id}'";
         pdo_execute($sql);
     }
     function delete_nguoidung($id) {

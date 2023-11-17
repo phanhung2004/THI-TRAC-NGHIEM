@@ -101,7 +101,29 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
                 insert_chuyende($tenchuyende);
 
             }
-            include "./chuyende/addchuyende.php";
+            include "chuyende/addchuyende.php";
+            break;
+        case"suacd":
+            if(isset($_GET['idcd']) && ($_GET['idcd'] > 0 )){
+                $suacd=load_one_chuyende($_GET['idcd']);
+            }
+            include "chuyende/editcd.php";
+            break; 
+        // case "suacd":
+        //     if(isset($_GET['idcd']) && ($_GET['idcd'] > 0) ){
+        //         $suacd=load_one_chuyende($_GET['idcd']);
+        //     }
+        //     include "chuyende/editcd.php";
+        //     break; 
+        case "updatecd":
+            if(isset($_POST['capnhatcd']) && ($_POST['capnhatcd'])){
+                $id=$_POST['id'];
+                $tenchuyende=$_POST['tencd'];
+
+                updatecd($id, $tenchuyende);
+                header("locaiton: index.php?act=chuyende");
+            }
+            include "chuyende/editcd.php";
             break;
         case"chuyende":
             $listchuyende=load_all_chuyende();
@@ -146,6 +168,7 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
                 $quyen=$_POST['quyen'];
 
                 update_nguoidung($id,$username, $password, $hinhanh, $diachi, $sodienthoai, $quyen);
+                header("locaiton: index.php?act=thanhvien");
             }
             include "thanhvien/updatenguoidung.php";
             break;
@@ -160,13 +183,6 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             $listnguoidung=load_all_nguoidung();
             include "thanhvien/thanhvien.php";
             break;   
-        case"suacd":
-            $title = "Cập nhật chuyên đề";
-            if(isset($_GET['id'])){
-                $id = $_GET['id'];
-                include "chuyende/edit.php";
-            }
-            break; 
     }
 }else{
     include "admin.php";

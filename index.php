@@ -39,6 +39,9 @@ $lichthi=loadall_lichthi();
                 include "view/login.php";
                 break;
             case "dethi":
+                if(isset($_GET['idlt']) && ($_GET['idlt'])){
+                    
+                }
                 include "dethi.html";
                 break;
             case "home":

@@ -40,10 +40,10 @@
                       <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                     <form class="d-flex m-1" role="login">
-                        <button class="btn btn-outline-success" type="submit"><a href="register.html">Register</a></button>
+                        <button class="btn btn-outline-success" type="submit"><a href="index.php?act=register">Register</a></button>
                     </form>
                     <form class="d-flex m-1" role="sigin">
-                        <button class="btn btn-outline-success" type="submit"><a href="login.html">Login</a></button>
+                        <button class="btn btn-outline-success" type="submit"><a href="include.php?act=login">Login</a></button>
                     </form>
                   </div>
                 </div>
@@ -57,10 +57,9 @@
                 <span>Nhập Tên người dùng</span>
                 <input type="text" name="username" ><br>
                 <span>Nhập mật khẩu</span>
-                <input type="password" name="pass" ><br>
+                <input type="password" name="password" ><br>
 
                 <input type="submit" name="login" value="Login">
-                <input type="reset" name="" id="" value="Reset">
             </form>
             <div class="title-item">
               <img src="img/sp2.jpg" alt="">

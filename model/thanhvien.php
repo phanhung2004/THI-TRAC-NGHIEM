@@ -21,4 +21,10 @@
         $sql = "DELETE FROM nguoidung WHERE `nguoidung`.`id` = '{$id}'";
         pdo_execute($sql);
     }
+
+    function check_user($username, $password){
+        $sql="SELECT * FROM nguoidung where `username`='$username' and `password`='$password'";
+        $nguoidung=pdo_query_one($sql);
+        return $nguoidung;
+    }
 ?>

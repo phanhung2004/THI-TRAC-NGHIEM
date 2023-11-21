@@ -40,10 +40,10 @@
                       <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                     <form class="d-flex m-1" role="login">
-                        <button class="btn btn-outline-success" type="submit"><a href="register.html">Register</a></button>
+                        <button class="btn btn-outline-success" type="submit"><a href="index.php?act=register">Register</a></button>
                     </form>
                     <form class="d-flex m-1" role="sigin">
-                        <button class="btn btn-outline-success" type="submit"><a href="login.html">Login</a></button>
+                        <button class="btn btn-outline-success" type="submit"><a href="index.php?act=login">Login</a></button>
                     </form>
                   </div>
                 </div>
@@ -57,12 +57,14 @@
                 <span>Nhập Tên người dùng</span>
                 <input type="text" name="username" ><br>
                 <span>Nhập mật khẩu</span>
-                <input type="password" name="pass" ><br>
-                <span>Nhập lại mật khẩu</span>
-                <input type="password" name="passreset"><br>
-                <span>Nhập email</span>
-                <input type="email" name="email"><br>
-                <input type="submit" name="login" value="Register">
+                <input type="password" name="password" ><br>
+                <span>Nhập hình ảnh</span>
+                <input type="file" name="hinanh"><br>
+                <span>Nhập địa chỉ</span>
+                <input type="text" name="diachi"><br>
+                <span>Nhập số điện thoại</span>
+                <input type="text" name="sodienthoai"><br>
+                <input type="submit" name="register" value="Register">
                 <input type="reset" name="" id="" value="Reset">
             </form>
             <div class="title-item">

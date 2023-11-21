@@ -13,6 +13,7 @@
                 <th scope="col">STT</th>
                 <th scope="col">So cau</th>
                 <th scope="col">bo de thi</th>
+                <th scope="col">Id_lichthi</th>
                 <th scope="col"></th>
               </tr>
             </thead>
@@ -23,13 +24,15 @@
                   foreach($listdethi as $dt){
                     extract($dt);
                     $stt+=1;
+                    $suadethi="index.php?act=suadethi&iddt=".$id;
                     $deletedethi="index.php?act=deletedethi&iddt=".$id;
             
                 ?>
                 <th scope="row"><?=$stt?></th>
                 <td><?=$socau?></td>
                 <td><?=$bodethi?></td>
-                <td><a href="$suasp"><input type="button" value="Sửa"></a>   
+                <td><?php=$id_lichthi?></td>
+                <td><a href="<?=$suadethi?>"><input type="button" value="Sửa"></a>   
                 <td><a href="<?=$deletedethi?>"><input type="button" onclick="return confirm('ban co muon xoa khong')" value="Xóa"></a>
                 <?php
                   }
@@ -39,4 +42,4 @@
             </tbody>
           </table>
 <br>
-     <button>Thêm</button>
+     <a href="index.php?act=adddethi"><input type="button" name="" id="" value="Thêm đề thi"></a>

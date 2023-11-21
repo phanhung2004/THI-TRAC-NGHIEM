@@ -62,6 +62,36 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             $listdethi=loadall_dethi();
             include "dethi/dethi.php";
             break;
+        case "adddethi":
+            if(isset($_POST['adddethi']) && ($_POST['adddethi'] > 0)){
+                $socau=$_POST['socau'];
+                $bodethi=$_POST['bodethi'];
+                $id_lichthi=$_POST['id_lichthi'];
+
+                add_dethi($socau, $bodethi, $id_lichthi);
+                header("location: index.php?act=dethi");
+
+            }
+            include "dethi/add.php";
+            break;
+        case "suadethi":
+            if(isset($_GET['iddt']) && ($_GET['iddt'] > 0)){
+                $suadethi=load_one_dethi($_GET['iddt']);
+            }
+            include "dethi/edit.php";
+            break;
+        case "updatedethi":
+            if(isset($_POST['editdethi']) && $_POST['editdethi']){
+                $id=$_POST['id'];
+                $socau=$_POST['socau'];
+                $bodethi=$_POST['bodethi'];
+                $id_lichthi=$_POST['id_lichthi'];
+
+                update_dethi($id, $socau, $bodethi, $id_lichthi);
+                header("location: index.php?act=dethi");
+            }
+            include "dethi/edit.php";
+            break;
         case "addcauhoi":
             if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
                 $idcd=$_POST['idcd'];

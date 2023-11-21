@@ -41,5 +41,5 @@
             </tbody>
           </table>
 <br>
-     <button>Thêm</button>
+    <a href=""><input type="button" value="Thêm lịch thi"></a>
 

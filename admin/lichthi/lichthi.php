@@ -24,6 +24,7 @@
                 <?php
                   foreach($listlichthi as $lt){
                     extract($lt);
+                    $editlichthi="index.php?act=editlichthi&idlt=".$id;
                     $deletelichthi = "index.php?act=deletelichthi&idlt=".$id;
                 ?>
                 <th scope="row"><?=$id?></th>
@@ -31,7 +32,7 @@
                 <td><?=$batdau?></td>
                 <td><?=$ketthuc?></td>
                 <td><?=$thoigianthi?></td>        
-                <td><a href=""><input type="button" value="Sửa"></a>   
+                <td><a href="<?=$editlichthi?>"><input type="button" value="Sửa"></a>   
                 <td><a href="<?=$deletelichthi?>"><input type="button" onclick="return confirm('Bạn có muốn xóa không?')" value="Xóa"></a>
                 <?php
                 }

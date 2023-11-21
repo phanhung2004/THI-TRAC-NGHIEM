@@ -25,8 +25,7 @@
 
            <div class="row2 mb10 form_content_container">
            <label> Thời gian thi </label> <br>
-            <input type="text" name="thoigianthi" placeholder="Nhập thời gian thi">
-            <input type="time" name="" id="">
+            <input type="time" name="thoigianthi" placeholder="Nhập thời gian thi">
            </div>
 
            <div class="row2 mb10 form_content_container">

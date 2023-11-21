@@ -63,6 +63,25 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             }
             include "lichthi/add.php";
             break;
+        case "editlichthi":
+            if(isset($_GET['idlt']) && ($_GET['idlt'] > 0)){
+                $editlichthi=load_one_lichthi($_GET['idlt']);
+            }
+            include "lichthi/edit.php";
+            break;
+        case "updatelichthi":
+            if(isset($_POST['editlichthi']) && ($_POST['editlichthi'])){
+                $id=$_POST['id'];
+                $tenkithi=$_POST['tenkithi'];
+                $batdau=$_POST['batdau'];
+                $ketthuc=$_POST['ketthuc'];
+                $thoigianthi=$_POST['thoigianthi'];
+                $sodethi=$_POST['sodethi'];
+
+                update_lichthi($id, $tenkithi, $batdau, $ketthuc, $thoigianthi, $sodethi);
+            }
+            include "lichthi/edit.php";
+            break;
         case "deletedethi":
             if(isset($_GET['iddt']) && ($_GET['iddt']>0)){
                 delete_dethi($_GET['iddt']);

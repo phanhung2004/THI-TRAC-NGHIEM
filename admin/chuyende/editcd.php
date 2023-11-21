@@ -9,7 +9,7 @@
           <h1>Cập nhật chuyên đề</h1>
          </div>
          <div class="row2 form_content ">
-          <form action="index.php?act=suacd" method="POST" enctype="multipart/form-data">
+          <form action="index.php?act=updatecd" method="POST" enctype="multipart/form-data">
 
            <div class="row2 mb10 form_content_container">
            <label> Tên chuyên đề</label> <br>

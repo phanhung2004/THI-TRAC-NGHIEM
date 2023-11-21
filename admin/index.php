@@ -103,25 +103,19 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             }
             include "chuyende/addchuyende.php";
             break;
-        case"suacd":
-            if(isset($_GET['idcd']) && ($_GET['idcd'] > 0 )){
+        case "suacd":    
+            if(isset($_GET['idcd']) && ($_GET['idcd'] > 0) ){
                 $suacd=load_one_chuyende($_GET['idcd']);
             }
             include "chuyende/editcd.php";
-            break; 
-        // case "suacd":
-        //     if(isset($_GET['idcd']) && ($_GET['idcd'] > 0) ){
-        //         $suacd=load_one_chuyende($_GET['idcd']);
-        //     }
-        //     include "chuyende/editcd.php";
-        //     break; 
+            break;
         case "updatecd":
             if(isset($_POST['capnhatcd']) && ($_POST['capnhatcd'])){
                 $id=$_POST['id'];
                 $tenchuyende=$_POST['tencd'];
 
                 updatecd($id, $tenchuyende);
-                header("locaiton: index.php?act=chuyende");
+                header("location: index.php?act=chuyende");
             }
             include "chuyende/editcd.php";
             break;
@@ -151,7 +145,7 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             }
             include "./thanhvien/addnguoidung.php";
             break;
-        case "suanguoidung":
+        case "suanguoidung":    
             if(isset($_GET['idnd']) && ($_GET['idnd'] > 0) ){
                     $taikhoan=load_one_nguoidung($_GET['idnd']);
             }
@@ -166,9 +160,8 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
                 $diachi=$_POST['diachi'];
                 $sodienthoai=$_POST['sodienthoai'];
                 $quyen=$_POST['quyen'];
-
                 update_nguoidung($id,$username, $password, $hinhanh, $diachi, $sodienthoai, $quyen);
-                header("locaiton: index.php?act=thanhvien");
+                header("location: index.php?act=thanhvien");
             }
             include "thanhvien/updatenguoidung.php";
             break;

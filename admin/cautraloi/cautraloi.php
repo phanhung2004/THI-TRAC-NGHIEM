@@ -34,7 +34,8 @@
                     <td><a href="<?=$link?>"><?= $noidung ?></a></td>
                     <td><?= $dapan ?></td>
                     <td><?= $type ?></td>
-                    <td><a href="http://">Sửa</a><a href="http://">Xóa</a></td>
+                    <td><a href="">Sửa</a></td>
+                    <td><a href="">Xóa</a></td>
                   </tr>
               <?php
                     $displayedQuestions[] = $id_cauhoi; // Thêm câu hỏi vào danh sách đã hiển thị

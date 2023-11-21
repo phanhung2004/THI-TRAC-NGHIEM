@@ -1,6 +1,9 @@
 <?php
     session_start();
     include "model/pdo.php";
+    include "model/lichthi.php";
+
+$lichthi=loadall_lichthi();
 
     if(isset($_GET['act'])&&($_GET['act']!="")){
         $act=$_GET['act'];

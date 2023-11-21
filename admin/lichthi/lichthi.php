@@ -41,5 +41,5 @@
             </tbody>
           </table>
 <br>
-    <a href=""><input type="button" value="Thêm lịch thi"></a>
+    <a href="index.php?act=addlichthi"><input type="button" value="Thêm lịch thi"></a>
 

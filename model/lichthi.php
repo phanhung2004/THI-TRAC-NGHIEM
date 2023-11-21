@@ -8,4 +8,9 @@
         $sql = "DELETE FROM `lichthi` WHERE `lichthi`.`id` = '{$id}'";
         pdo_execute($sql);
     }
+
+    function add_lichthi($tenkithi, $batdau, $ketthuc, $thoigianthi, $sodethi){
+        $sql="INSERT INTO `lichthi` (`tenkithi`, `batdau`, `ketthuc`, `thoigianthi`, `sodethi`) VALUES ('$tenkithi', '$batdau', '$ketthuc', '$thoigianthi', '$sodethi')";
+        pdo_execute($sql);
+    }
 ?>

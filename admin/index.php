@@ -50,6 +50,19 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             $listlichthi=loadall_lichthi();
             include "lichthi/lichthi.php";
             break;
+        case "addlichthi":
+            if(isset($_POST['addlichthi']) && ($_POST['addlichthi'] > 0)){
+                $tenkythi=$_POST['tenkithi'];
+                $batdau=$_POST['batdau'];
+                $ketthuc=$_POST['ketthuc'];
+                $thoigianthi=$_POST['thoigianthi'];
+                $sodethi=$_POST['sodethi'];
+
+                add_lichthi($tenkythi, $batdau, $ketthuc, $thoigianthi, $sodethi);
+                header("location: index.php?act=lichthi");
+            }
+            include "lichthi/add.php";
+            break;
         case "deletedethi":
             if(isset($_GET['iddt']) && ($_GET['iddt']>0)){
                 delete_dethi($_GET['iddt']);

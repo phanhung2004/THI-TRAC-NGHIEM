@@ -21,7 +21,7 @@
            </div>
 
            <div class="row mb10 ">
-         <input class="mr20" name="adddethi" type="submit" value="THÊM MỚI">
+         <input class="mr20" name="adddethi" type="submit" value="THÊM  MỚI">
          <input  class="mr20" type="reset" value="NHẬP LẠI">
 
          <a href="index.php?act=dethi"><input  class="mr20" type="button" value="DANH SÁCH"></a>

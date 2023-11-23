@@ -3,6 +3,7 @@
     include "model/pdo.php";
     include "model/lichthi.php";
     include "model/thanhvien.php";
+    include "model/chuyende.php";
 
 $lichthi=loadall_lichthi();
 
@@ -56,11 +57,13 @@ $lichthi=loadall_lichthi();
                 }
                 include "view/taikhoan/edittk.php";
                 break;
-            case "dethi":
-                if(isset($_GET['idlt']) && ($_GET['idlt'])){
-                    
-                }
-                include "dethi.html";
+            case "chonchuyende":
+                $listchuyende=load_all_chuyende();
+                include "view/chonchuyende.php";
+                break;
+            case "lichthi":
+                $listlichthi=loadall_lichthi();
+                include "view/lichthi.php";
                 break;
             case "home":
                 include "view/home.php";

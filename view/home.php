@@ -9,7 +9,7 @@
               <?php
                 foreach($lichthi as $lt){
                   extract($lt);
-                  $link="index.php?act=dethi&idlt=".$id;
+                  $link="index.php?act=lichthi&idlt=".$id;
               ?>
                 <div class="box_items">
                   <div class="box_items_img">

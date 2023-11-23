@@ -58,7 +58,7 @@
                   extract($_SESSION['username']);
               ?>
                 <p>Xin chào <?=$username?></p>
-                <button><a href="index.php?act=logout">Đăng xuất</a></button>
+                <button type="button" class="btn btn-danger"><a href="index.php?act=logout">Đăng xuất</a></button>
                 <?php
                   if($quyen==0){
                 ?>

@@ -93,3 +93,6 @@ footer p{
 h1{
     text-align: center;
 }
+.btn btn-danger{
+    color: white;
+}

@@ -1,5 +1,8 @@
+<?php
+    include "view/header.php";
+?>
 <main>
-    <div>
+    <div class="account_edit">
         <div>Cập nhật tài khoản</div>
         <div>
             <?php

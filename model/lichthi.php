@@ -22,6 +22,6 @@
 
     function update_lichthi($id, $tenkithi, $batdau, $ketthuc, $thoigianthi, $sodethi){
         $sql="UPDATE `lichthi` SET `tenkithi` = {'$tenkithi}', `batdau` = '{$batdau}', `ketthuc` = '{$ketthuc}', `thoigianthi` = '{$thoigianthi}', `sodethi` = '{$sodethi}' WHERE `lichthi`.`id` = '{$id}'";
-        pdo_execute($sql);
+        pdo_execute($sql); 
     }
 ?>

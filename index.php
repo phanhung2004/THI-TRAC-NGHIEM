@@ -11,17 +11,23 @@ $lichthi=loadall_lichthi();
         switch($act){
             case "login":
                 if(isset($_POST['login']) && ($_POST['login'])){
-                    $username =$_POST['username'];
+                    $username=$_POST['username'];
                     $password=$_POST['password'];
-                    $checkuser=check_user($username, $password);
+                    $checkuser=checkuser($username, $password);
                     if(is_array($checkuser)){
                         $_SESSION['username']=$checkuser;
                         // header("location: index.php");
+                        echo $dangnhap="Đăng nhập thành công";
                     }else{
-                        $thongbao="Tài khoản không tồn tại";
+                        echo $thongbao="Tài khoản không tồn tại";
                     }
                 }
                 include "view/taikhoan/login.php";
+                break;
+            case "logout":
+                logout();
+                echo $logout="Đã đăng xuất";
+                include "trangchu.html";
                 break;
             case "register":
                 if(isset($_POST['register']) && ($_POST['register'])){
@@ -35,8 +41,20 @@ $lichthi=loadall_lichthi();
                 }
                 include "view/taikhoan/register.php";
                 break;
-            case "login":
-                include "view/login.php";
+            case "edittk":
+                if(isset($_POST['capnhat']) && ($_POST['capnhat'])){
+                    $id=$_POST['id'];
+                    $username=$_POST['username'];
+                    $password=$_POST['password'];
+                    $hinhanh=$_POST['hinhanh'];
+                    $diachi=$_POST['diachi'];
+                    $sodienthoai=$_POST['sodienthoai'];
+
+                    update_nguoidung($id, $username, $password, $hinhanh, $diachi, $sodienthoai);
+                    $capnhat="Cập nhật thành công";
+                    $_SESSION['username']=checkuser($username, $password);
+                }
+                include "view/taikhoan/edittk.php";
                 break;
             case "dethi":
                 if(isset($_GET['idlt']) && ($_GET['idlt'])){

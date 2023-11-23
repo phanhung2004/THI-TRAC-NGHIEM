@@ -222,7 +222,7 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
                 $diachi=$_POST['diachi'];
                 $sodienthoai=$_POST['sodienthoai'];
                 $quyen=$_POST['quyen'];
-                update_nguoidung($id,$username, $password, $hinhanh, $diachi, $sodienthoai, $quyen);
+                update_nguoidungad($id,$username, $password, $hinhanh, $diachi, $sodienthoai, $quyen);
                 header("location: index.php?act=thanhvien");
             }
             include "thanhvien/updatenguoidung.php";
@@ -238,6 +238,9 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             $listnguoidung=load_all_nguoidung();
             include "thanhvien/thanhvien.php";
             break;   
+        case "home":
+            include "admin.php";
+            break;
     }
 }else{
     include "admin.php";

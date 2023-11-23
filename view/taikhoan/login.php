@@ -51,21 +51,49 @@
         </div>
 
         <!-- end header  -->
-        <h1>Sigin</h1>
-        <div class="login">
-            <form action="" method="POST">
+        <div>
+              <h1>Login</h1>
+              <?php
+                if(isset($_SESSION['username'])){
+                  extract($_SESSION['username']);
+              ?>
+                <p>Xin chào <?=$username?></p>
+                <button><a href="index.php?act=logout">Đăng xuất</a></button>
+                <?php
+                  if($quyen==0){
+                ?>
+                  <button><a href="admin/index.php">Quản trị viên</a></button>
+                <?php
+                  }
+                ?>
+                <button><a href="index.php?act=edittk">Cập nhật tài khoản</a></button>
+              <?php
+                }else{
+              ?>
+              <div class="login">
+              <form action="" method="POST">
                 <span>Nhập Tên người dùng</span>
                 <input type="text" name="username" ><br>
                 <span>Nhập mật khẩu</span>
                 <input type="password" name="password" ><br>
 
                 <input type="submit" name="login" value="Login">
-            </form>
-            <div class="title-item">
-              <img src="img/sp2.jpg" alt="">
-              <img src="img/sp3.jpg" alt="">
+              </form>
+              <div class="title-item">
+                <img src="img/sp2.jpg" alt="">
+                <img src="img/sp3.jpg" alt="">
+              </div>
+              <?php
+                }
+              ?>
+
+              <?php
+                if(isset($dangnhap) && ($dangnhap!= "")){
+                  echo $dangnhap;
+                }
+              ?>
             </div>
-        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>

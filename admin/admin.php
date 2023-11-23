@@ -1,5 +1,7 @@
 
-
+        <div>
+            <a href="../index.php"><input type="submit" name="" id="" value="Thoát giao diện admin"></a>
+        </div>
         <div class="contens">
             <h2>Biểu đồ Tổng quan</h2>
         </div>

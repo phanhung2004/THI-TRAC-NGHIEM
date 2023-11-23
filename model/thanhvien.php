@@ -13,7 +13,7 @@
         $sql = "INSERT INTO `nguoidung` (`username`, `password`, `diachi`, `sodienthoai`, `quyen`) VALUES ('$username', '$password','$diachi', '$sodienthoai', '$quyen');";
         pdo_execute($sql);
     }
-    function update_nguoidung($id, $username, $password, $hinhanh, $diachi, $sodienthoai, $quyen){
+    function update_nguoidungad($id, $username, $password, $hinhanh, $diachi, $sodienthoai, $quyen){
         $sql="UPDATE `nguoidung` SET `username` = '{$username}', `password` = '{$password}', `hinhanh` = '{$hinhanh}', `diachi` = '{$diachi}', `sodienthoai` = '{$sodienthoai}', `quyen` = '{$quyen}' WHERE `nguoidung`.`id` = '{$id}'";
         pdo_execute($sql);
     }
@@ -22,9 +22,19 @@
         pdo_execute($sql);
     }
 
-    function check_user($username, $password){
+    function checkuser($username, $password){
         $sql="SELECT * FROM nguoidung where `username`='$username' and `password`='$password'";
         $nguoidung=pdo_query_one($sql);
         return $nguoidung;
+    }
+    function logout(){
+        if(isset($_SESSION['username'])){
+            unset($_SESSION['username']);
+        }
+    }
+
+    function update_nguoidung($id, $username, $password, $hinhanh, $diachi, $sodienthoai){
+        $sql="UPDATE `nguoidung` SET `username` = '$username', `password` = '$password', `hinhanh` = '$hinhanh', `diachi` = '$diachi', `sodienthoai` = '$sodienthoai' WHERE `nguoidung`.`id` = $id";
+        pdo_execute($sql);
     }
 ?>

@@ -20,13 +20,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <?php
+            <?php
                   foreach($listlichthi as $lt){
                     extract($lt);
                     $editlichthi="index.php?act=editlichthi&idlt=".$id;
                     $deletelichthi = "index.php?act=deletelichthi&idlt=".$id;
                 ?>
+              <tr>
                 <th scope="row"><?=$id?></th>
                 <td><?=$tenkithi?></td>
                 <td><?=$batdau?></td>
@@ -34,11 +34,10 @@
                 <td><?=$thoigianthi?></td>        
                 <td><a href="<?=$editlichthi?>"><input type="button" value="Sửa"></a>   
                 <td><a href="<?=$deletelichthi?>"><input type="button" onclick="return confirm('Bạn có muốn xóa không?')" value="Xóa"></a>
-                <?php
+              </tr>
+              <?php
                 }
                 ?>
-              </tr>
-
             </tbody>
           </table>
 <br>

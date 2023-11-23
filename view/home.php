@@ -2,7 +2,7 @@
     include "header.php";
 ?>
 <div class="contens">
-          <h2>Lich Thi</h2>
+          <h2>Đề Thi</h2>
         </div>
         <main class="catalog mb">
             <div class="items">

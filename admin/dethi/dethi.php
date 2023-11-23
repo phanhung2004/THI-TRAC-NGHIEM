@@ -18,8 +18,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <?php
+            <?php
                 $stt=0;
                   foreach($listdethi as $dt){
                     extract($dt);
@@ -28,16 +27,17 @@
                     $deletedethi="index.php?act=deletedethi&iddt=".$id;
             
                 ?>
+              <tr>
                 <th scope="row"><?=$stt?></th>
                 <td><?=$socau?></td>
                 <td><?=$bodethi?></td>
-                <td><?php=$id_lichthi?></td>
+                <td><?=$id_lichthi?></td>
                 <td><a href="<?=$suadethi?>"><input type="button" value="Sửa"></a>   
                 <td><a href="<?=$deletedethi?>"><input type="button" onclick="return confirm('ban co muon xoa khong')" value="Xóa"></a>
-                <?php
+              </tr>
+              <?php
                   }
                 ?>
-              </tr>
 
             </tbody>
           </table>

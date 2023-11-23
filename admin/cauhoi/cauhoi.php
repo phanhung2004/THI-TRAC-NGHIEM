@@ -19,23 +19,23 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <?php
+            <?php
                   foreach($listcauhoi as $ch){
                     extract($ch);
                     $deletecauhoi = "index.php?act=deletecauhoi&idch=".$id;
 
                 ?>
+              <tr>
                 <th scope="row"><?=$id?></th>
                 <td><a href="index.php?act=dapan"><?=$noidung?></a></td><br>
                 <td><?=$tenchuyende?></td>
                 <td>adimn a</td>
               
                 <td><a href=""><input type="button" value="Sửa"></a>   
-                <?php
+              </tr>
+              <?php
                   }
                 ?>
-              </tr>
               <!-- <tr>
                 <th scope="row">1</th>
                 <td>đây là gì</td>

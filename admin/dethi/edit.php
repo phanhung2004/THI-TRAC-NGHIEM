@@ -27,7 +27,7 @@
            </div>
 
            <div class="row mb10 ">
-            <input type="hiden" name="id" value="<?=$id?>">
+            <input type="hidden" name="id" value="<?=$id?>">
          <input class="mr20" name="editdethi" type="submit" value="Cập nhật đề thi">
          <input  class="mr20" type="reset" value="NHẬP LẠI">
 

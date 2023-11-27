@@ -38,6 +38,13 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             $listdapan = loadall_dapan();
             include "cautraloi/cautraloi.php";
             break;
+        case "deletedapan":
+            if(isset($_GET['idda']) && ($_GET['idda'] > 0)){
+                deletedapan($_GET['idda']);
+            }
+            $listdapan = loadall_dapan();
+            include "cautraloi/cautraloi.php";
+            break;
         case "deletelichthi":
             if(isset($_GET['idlt']) && ($_GET['idlt']>0)){
                 delete_lichthi($_GET['idlt']);
@@ -51,7 +58,7 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             include "lichthi/lichthi.php";
             break;
         case "addlichthi":
-            if(isset($_POST['addlichthi']) && ($_POST['addlichthi'] > 0)){
+            if(isset($_POST['addlichthi']) && ($_POST['addlichthi'])){
                 $tenkythi=$_POST['tenkithi'];
                 $batdau=$_POST['batdau'];
                 $ketthuc=$_POST['ketthuc'];
@@ -79,6 +86,7 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
                 $sodethi=$_POST['sodethi'];
 
                 update_lichthi($id, $tenkithi, $batdau, $ketthuc, $thoigianthi, $sodethi);
+                header("location: index.php?act=lichthi");
             }
             include "lichthi/edit.php";
             break;
@@ -146,6 +154,13 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             $listcauhoi=load_all_cauhoi();
             include "cauhoi/cauhoi.php";
             break;
+        case "deletecauhoi":
+            if(isset($_GET['idch']) && ($_GET['idch'] > 0)){
+                deletecauhoi($_GET['idch']);
+            }
+            $listcauhoi=load_all_cauhoi();
+            include "cauhoi/cauhoi.php";
+            break;
         case"cautraloi":
             include "cautraloi/cautraloi.php";
             break;
@@ -161,6 +176,7 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
                 $tenchuyende=$_POST['tenchuyende'];
                 insert_chuyende($tenchuyende);
+                header("location:index.php?act=chuyende");
 
             }
             include "chuyende/addchuyende.php";
@@ -190,9 +206,6 @@ if (isset($_GET['act']) && ($_GET['act']!="")){
             break;
         case"ketqua":
             include "ketqua/ketqua.php";
-            break;
-        case"lichthi":
-            include "lichthi/lichthi.php";
             break;
 
         case "addnguoidung":

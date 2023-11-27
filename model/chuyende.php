@@ -12,8 +12,8 @@
         $sql = "DELETE FROM chuyende WHERE `chuyende`.`id` = '{$id}'";
         pdo_execute($sql);
     }
-    function updatecd($id){
-        $sql="UPDATE `chuyende` SET `tenchuyende` = 'JavaScripts' WHERE `chuyende`.`id` = '{$id}'";
+    function updatecd($id,$tenchuyende){
+        $sql="UPDATE `chuyende` SET `tenchuyende` = '$tenchuyende' WHERE `chuyende`.`id` = '{$id}'";
         pdo_execute($sql);
     }
     function load_one_chuyende($id){

@@ -31,7 +31,8 @@
                 <td><?=$tenchuyende?></td>
                 <td>adimn a</td>
               
-                <td><a href=""><input type="button" value="Sửa"></a>   
+                <td><a href=""><input type="button" value="Sửa"></a> 
+                <td><a href="<?=$deletecauhoi?>"><input type="button" onclick="return confirm('Bạn có muốn xóa không')" value="Xóa"></a></td>  
               </tr>
               <?php
                   }

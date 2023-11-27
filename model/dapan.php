@@ -13,4 +13,9 @@
         $listdapanview=pdo_query($sql);
         return $listdapanview;
     }
+
+    function deletedapan($id){
+        $sql="DELETE FROM dapan where id= $id";
+        pdo_execute($sql);
+    }
 ?>

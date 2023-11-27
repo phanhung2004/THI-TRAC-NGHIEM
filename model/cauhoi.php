@@ -5,7 +5,7 @@
         return $listcauhoi;
     }
     function deletecauhoi($id) {
-        $sql = "DELETE FROM cauhoi WHERE `cauhoi`.`id` = '{$id}'";
+        $sql = "DELETE FROM `cauhoi` WHERE `cauhoi`.`id` = '{$id}'";
         pdo_execute($sql);
     }
     function insert_cauhoi($idcd, $noidung, $caudung){

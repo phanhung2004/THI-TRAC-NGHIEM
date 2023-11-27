@@ -26,6 +26,7 @@
                 $displayedQuestions = []; // Mảng lưu trữ các câu hỏi đã được hiển thị
                 foreach($listdapan as $da){
                   extract($da);
+                  $deletedapan="index.php?act=deletedapan&idda=".$id;
                   $link = "index.php?act=viewdapan&idch=".$id_cauhoi;
                   if(!in_array($id_cauhoi, $displayedQuestions)){ // Kiểm tra xem câu hỏi đã được hiển thị chưa
               ?>
@@ -35,7 +36,7 @@
                     <td><?= $dapan ?></td>
                     <td><?= $type ?></td>
                     <td><a href="">Sửa</a></td>
-                    <td><a href="">Xóa</a></td>
+                    <td><a href="<?=$deletedapan?>"><input type="button" onclick="return confirm('Bạn có muốn xóa không')" value="Xóa"></a></td>
                   </tr>
               <?php
                     $displayedQuestions[] = $id_cauhoi; // Thêm câu hỏi vào danh sách đã hiển thị

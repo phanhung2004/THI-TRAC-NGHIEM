@@ -12,4 +12,9 @@
         $sql = "INSERT INTO `cauhoi` (`noidung`, `caudung`, `id_chuyende`) VALUES ('$noidung', '$caudung','$idcd');";
         pdo_execute($sql);
     }
+    function loadallcauhoi_dapan() {
+        $sql = "SELECT * FROM `cauhoi` INNER JOIN `dapan` ON cauhoi.id = dapan.id";
+        $listthi = pdo_query($sql);
+        return $listthi;
+    }
 ?>

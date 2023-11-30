@@ -2,14 +2,14 @@
     include "header.php";
 ?>
 <div class="contens">
-          <h2>Đề Thi</h2>
+          <h2>Lịch Thi</h2>
         </div>
         <main class="catalog mb">
             <div class="items">
               <?php
                 foreach($lichthi as $lt){
                   extract($lt);
-                  $link="index.php?act=lichthi&idlt=".$id;
+                  $link="index.php?act=dethi&iddt=".$id;
               ?>
                 <div class="box_items">
                   <div class="box_items_img">

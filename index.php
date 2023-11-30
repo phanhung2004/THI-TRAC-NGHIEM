@@ -4,12 +4,41 @@
     include "model/lichthi.php";
     include "model/thanhvien.php";
     include "model/chuyende.php";
+    include "model/cauhoi.php";
+    include "model/dethi.php";
 
 $lichthi=loadall_lichthi();
 
     if(isset($_GET['act'])&&($_GET['act']!="")){
         $act=$_GET['act'];
         switch($act){
+            
+            case "viewthi":
+                $listthi = loadallcauhoi_dapan();
+                // var_dump($listthi);
+                foreach($listthi as $key=>$val){
+
+                }
+                // foreach($bodethi as $index=>$cauhoi){
+                //     $bodethi[$index]['dapan'] =  [
+                //         1 =>'Đáp án 1'  ,
+                //         2 => "Đáp án 2",
+                //         3 => "Đáp án 3"  ,
+                //         4 => "Đáp án 4"
+                        
+                //     ];
+                // }
+                // //Chuyển sang chuỗi JSON
+                // $bodethi = json_encode($bodethi);
+                
+                // var_dump($bodethi);
+                
+                
+                // //chuyển lại bộ đề thi sang array
+                // $bodethi = json_decode($bodethi, false);
+                // var_dump($bodethi);
+                include "view/viewthi.php";
+                break;
             case "login":
                 if(isset($_POST['login']) && ($_POST['login'])){
                     $username=$_POST['username'];
@@ -61,9 +90,9 @@ $lichthi=loadall_lichthi();
                 $listchuyende=load_all_chuyende();
                 include "view/chonchuyende.php";
                 break;
-            case "lichthi":
-                $listlichthi=loadall_lichthi();
-                include "view/lichthi.php";
+            case "dethi":
+                $listdethi = loadall_dethi();
+                include "view/dethi.php";
                 break;
             case "home":
                 include "view/home.php";
